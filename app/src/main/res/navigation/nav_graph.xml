@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.lecture11exer.WelcomeFragment"
+        android:label="Citizenship Test"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_quiz_board_fragment"
+            app:destination="@id/quiz_board_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz_board_fragment"
+        android:name="com.example.lecture11exer.QuizBoardFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_quiz_board">
+        <action
+            android:id="@+id/action_quiz_board_fragment_to_quiz_result_Fragment"
+            app:destination="@id/quiz_result_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz_result_Fragment"
+        android:name="com.example.lecture11exer.QuizResultFragment"
+        android:label="Citizenship Test"
+        tools:layout="@layout/fragment_quiz_result">
+        <action
+            android:id="@+id/action_quiz_result_Fragment_to_quiz_board_fragment"
+            app:destination="@id/quiz_board_fragment" />
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <argument
+            android:name="score_string"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.lecture11exer.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.lecture11exer.DetailFragment"
+        android:label="detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.lecture11exer.ReviewFragment"
+        android:label="review Test"
+        tools:layout="@layout/fragment_review" />
+</navigation>

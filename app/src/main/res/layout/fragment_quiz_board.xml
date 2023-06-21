@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizBoardFragment">
+
+
+    <TextView
+        android:id="@+id/TW_cur_question_on_total"
+        android:layout_width="225dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/Display_current_NoQuestion"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TW_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/display_score"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TW_display_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/questions_quiz_board"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TW_cur_question_on_total" />
+
+
+    <RadioButton
+        android:id="@+id/answerA"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/answer_A_board"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TW_display_question" />
+
+    <RadioButton
+        android:id="@+id/answerB"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="@string/answer_B_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/answerA"
+        app:layout_constraintTop_toBottomOf="@+id/TW_display_question" />
+
+    <RadioButton
+        android:id="@+id/answerC"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/answer_C_board"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerA" />
+
+    <RadioButton
+        android:id="@+id/answerD"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/answer_D_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toEndOf="@+id/answerC"
+        app:layout_constraintTop_toBottomOf="@+id/answerB" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/next_button_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TW_display_question" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
